@@ -84,14 +84,15 @@ function update () { // 3. continuamente
 
   if (this.keys.left.isDown) {
     this.mario.anims.play('mario-walk', true)
-    this.mario.x -= 2
+    this.mario.setVelocityX(-50)
     this.mario.flipX = true
   } else if (this.keys.right.isDown) {
     this.mario.anims.play('mario-walk', true)
-    this.mario.x += 2
+    this.mario.setVelocityX(50)
     this.mario.flipX = false
   } else {
     this.mario.anims.play('mario-idle', true)
+    this.mario.setVelocityX(0)
   }
 
   if (this.keys.up.isDown && this.mario.body.touching.down) {
