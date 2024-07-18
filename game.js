@@ -59,7 +59,7 @@ function create () {
     .refreshBody()
 
   this.floor
-    .create(150, config.height - 16, 'floorbricks')
+    .create(128 + 32, config.height - 16, 'floorbricks')
     .setOrigin(0, 0.5)
     .refreshBody()
 
