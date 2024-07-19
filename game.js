@@ -91,7 +91,8 @@ function update () { // 3. continuamente
     this.mario.x += 2
     this.mario.flipX = false
   } else {
-    this.mario.anims.play('mario-idle', true)
+    if (this.mario.body.touching.down)
+    this.mario.anims.play("mario-idle", true);
   }
 
   if (this.keys.up.isDown && this.mario.body.touching.down) {
