@@ -59,7 +59,7 @@ function create () {
     .refreshBody()
 
   this.floor
-    .create(150, config.height - 16, 'floorbricks')
+    .create(128 + 32, config.height - 16, 'floorbricks')
     .setOrigin(0, 0.5)
     .refreshBody()
 
@@ -84,14 +84,15 @@ function update () { // 3. continuamente
 
   if (this.keys.left.isDown) {
     this.mario.anims.play('mario-walk', true)
-    this.mario.x -= 2
+    this.mario.setVelocityX(-50)
     this.mario.flipX = true
   } else if (this.keys.right.isDown) {
     this.mario.anims.play('mario-walk', true)
-    this.mario.x += 2
+    this.mario.setVelocityX(50)
     this.mario.flipX = false
   } else {
     this.mario.anims.play('mario-idle', true)
+    this.mario.setVelocityX(0)
   }
 
   if (this.keys.up.isDown && this.mario.body.touching.down) {
