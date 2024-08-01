@@ -8,6 +8,16 @@ export const createAnimations = (game) => {
     frameRate: 12,
     repeat: -1
   })
+  
+  game.anims.create({
+    key: 'mario-grown-walk',
+    frames: game.anims.generateFrameNumbers(
+      'mario-grown',
+      { start: 1, end: 3 }
+    ),
+    frameRate: 12,
+    repeat: -1
+  })
 
   game.anims.create({
     key: 'mario-idle',
@@ -22,6 +32,11 @@ export const createAnimations = (game) => {
   game.anims.create({
     key: 'mario-jump',
     frames: [{ key: 'mario', frame: 5 }]
+  })
+
+  game.anims.create({
+    key: 'mario-grown-jump',
+    frames: [{ key: 'mario-grown', frame: 5 }]
   })
 
   game.anims.create({
@@ -52,5 +67,10 @@ export const createAnimations = (game) => {
     ),
     frameRate: 12,
     repeat: -1
+  })
+
+  game.anims.create({
+    key: 'supermushroom-idle',
+    frames: [{ key: 'supermushroom', frame: 0 }]
   })
 }
