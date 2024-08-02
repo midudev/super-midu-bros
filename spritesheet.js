@@ -1,7 +1,7 @@
 const INIT_SPRITESHEETS = [
   {
     key: 'mario',
-    path: 'assets/entities/mario.png',
+    path: 'assets/entities/midu.png',
     frameWidth: 18,
     frameHeight: 16
   },
@@ -19,7 +19,7 @@ const INIT_SPRITESHEETS = [
   },
   {
     key: 'mario-grown',
-    path: 'assets/entities/mario-grown.png',
+    path: 'assets/entities/midu-grande.png',
     frameWidth: 18,
     frameHeight: 32
   }
