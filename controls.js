@@ -25,11 +25,11 @@ export function checkControls ({ mario, keys }) {
     : MARIO_ANIMATIONS.normal
 
   if (isLeftKeyDown) {
-    isMarioTouchingFloor && mario.anims.play('mario-walk', true)
+    isMarioTouchingFloor && mario.anims.play(marioAnimations.walk, true)
     mario.x -= 2
     mario.flipX = true
   } else if (isRightKeyDown) {
-    isMarioTouchingFloor && mario.anims.play('mario-walk', true)
+    isMarioTouchingFloor && mario.anims.play(marioAnimations.walk, true)
     mario.x += 2
     mario.flipX = false
   } else if (isMarioTouchingFloor) {
@@ -38,6 +38,6 @@ export function checkControls ({ mario, keys }) {
 
   if (isUpKeyDown && isMarioTouchingFloor) {
     mario.setVelocityY(-300)
-    mario.anims.play('mario-jump', true)
+    mario.anims.play(marioAnimations.jump, true)
   }
 }
